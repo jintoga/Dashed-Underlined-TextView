@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textView;
     private final static String text =
-        "EDIT: I have updated solution. Sometimes that drawBackground method in solution with LineBackgroundSpanjust haven't been called for no reasons. New version works all the time and looks much clearer.";
+        "In 1933 RCA Communications, New York introduced the first \"telex\" service.[1][not in citation given][2] The first messages over RCA transatlantic circuits went between New York and London. The first year of operation saw seven million words or 300,000 radiograms transmitted.[citation needed] Radio has long sent alphanumeric messages via radiotelegraphy.[3] The University of Hawaii began using radio to send digital information as early as 1971, using ALOHAnet.[citation needed]";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
