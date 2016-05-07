@@ -3,6 +3,7 @@ package com.dat.DashedUnderlineText;
 import android.graphics.Canvas;
 import android.graphics.DashPathEffect;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.text.Layout;
 import android.text.style.LineBackgroundSpan;
 import android.text.style.LineHeightSpan;
@@ -42,9 +43,10 @@ public class DashedUnderlineSpan implements LineBackgroundSpan, LineHeightSpan {
         int lineNum = textView.getLineCount();
         for (int i = 0; i < lineNum; i++) {
             Layout layout = textView.getLayout();
-            canvas.drawLine(layout.getLineLeft(i), layout.getLineBottom(i) - spacingExtra + offsetY,
-                layout.getLineRight(i), layout.getLineBottom(i) - spacingExtra + offsetY,
-                this.paint);
+            Path path = new Path();
+            path.moveTo(layout.getLineLeft(i), layout.getLineBottom(i) - spacingExtra + offsetY);
+            path.lineTo(layout.getLineRight(i), layout.getLineBottom(i) - spacingExtra + offsetY);
+            canvas.drawPath(path, this.paint);
         }
     }
 }
